@@ -1,21 +1,27 @@
-import { ADD_COUNT, SUB_COUNT, RESET_COUNT } from "../constants/constants.js";
+import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE} from "../constants/constants.js";
 
-export const getAddCount = (num) => {
+export const getOpenContent = (index) => {
   return {
-    type: ADD_COUNT,
-    payload: {num: num}
+    type: OPEN_CONTENT,
+    index: index
   }
 }
 
-export const getSubCount = (num) => {
+export const getCloseContent = (index) => {
   return {
-    type:  SUB_COUNT,
-    payload: {num: num}
+    type: CLOSE_CONTENT,
+    index: index
   }
 }
 
-export const getResetCount = () => {
+export const getOnDarkmode = () => {
   return {
-    type: RESET_COUNT
+    type: ON_DARKMODE
+  }
+}
+
+export const getOffDarkmode = () => {
+  return {
+    type: OFF_DARKMODE
   }
 }

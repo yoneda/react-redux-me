@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import Buttons from "../components/Buttons";
-import Display from "../components/Display";
 
 import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
@@ -12,9 +10,9 @@ import ContactItem from "../components/ContactItem";
 
 import Posts from "../components/Posts";
 
-import { getAddCount, getSubCount, getResetCount } from "../actions/actions.js";
+import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
 
-const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHandler }) => {
+const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
     {title:"kakeibo", link:"http://google.com"},
     {title:"2 posts in a week", link:"http://google.com"}
@@ -26,12 +24,6 @@ const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHan
 
   return (
     <div>
-      <Display count={count} />
-      <Buttons
-        addCountHandler={addCountHandler}
-        subCountHandler={subCountHandler}
-        resetCountHandler={resetCountHandler}
-      />
       <Projects
         button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
         items={projectContents.map((item,index)=>{
@@ -56,18 +48,17 @@ const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHan
 
 const mapStateToProps = state => {
   return {
-    count: state.count
+    toggles: state.toggles,
+    dark: state.dark
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  const addCountAction = getAddCount(1);
-  const subCountAction = getSubCount(1);
-  const resetCountAction = getResetCount();
   return {
-    addCountHandler: num => dispatch(addCountAction),
-    subCountHandler: num => dispatch(subCountAction),
-    resetCountHandler: num => dispatch(resetCountAction)
+    openContentHandler: index => dispatch(getOpenContent(index)),
+    closeContentHandler: index => dispatch(getCloseContent(index)),
+    onDarkmodeHandler: () => dispatch(getOnDarkmode()),
+    offDarkmodeHandler: () => dispatch(getOffDarkmode())
   };
 };
 

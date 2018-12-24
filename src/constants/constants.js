@@ -1,4 +1,4 @@
-
-export const ADD_COUNT = "ADD_COUNT";
-export const SUB_COUNT = "SUB_COUNT";
-export const RESET_COUNT = "RESET_COUNT";
+export const OPEN_CONTENT = "OPEN_CONTENT";
+export const CLOSE_CONTENT = "CLOSE_CONTENT";
+export const ON_DARKMODE = "ON_DARKMODE";
+export const OFF_DARKMODE = "ON_DARKMODE";
