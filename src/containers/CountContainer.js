@@ -10,17 +10,20 @@ import ProjectItem from "../components/ProjectItem";
 import Contacts from "../components/Contacts";
 import ContactItem from "../components/ContactItem";
 
+import Posts from "../components/Posts";
+
 import { getAddCount, getSubCount, getResetCount } from "../actions/actions.js";
 
 const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHandler }) => {
-  const projects = [
+  const projectContents = [
     {title:"kakeibo", link:"http://google.com"},
     {title:"2 posts in a week", link:"http://google.com"}
-  ]
-  const contacts = [
+  ];
+  const contactContents = [
     {title:"kakeibo", link:"http://google.com"},
     {title:"2 posts in a week", link:"http://google.com"}
-  ]
+  ];
+
   return (
     <div>
       <Display count={count} />
@@ -31,16 +34,22 @@ const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHan
       />
       <Projects
         button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
-        items={projects.map((project,index)=>{
-          return(<ProjectItem key={index} title={project.title} link={project.link} />)
+        items={projectContents.map((item,index)=>{
+          return(<ProjectItem key={index} title={item.title} link={item.link} />)
         })}
       />
+
       <Contacts
         button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
-        items={projects.map((project,index)=>{
-          return(<ProjectItem key={index} title={project.title} link={project.link} />)
+        items={contactContents.map((item,index)=>{
+          return(<ContactItem key={index} title={item.title} link={item.link} />)
         })}
       />
+
+      <Posts
+        button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
+      />
+      
     </div>
   );
 };
