@@ -1,11 +1,11 @@
 import React from "react";
 
-const Contacts = ({button, items}) => {
+const Contacts = ({isShow, button, items}) => {
   return(
     <div>
-      {button}
       <h2>Contacts</h2>
-      {items}
+      {button}
+      {isShow===true?items:""}
     </div>
   )
 }

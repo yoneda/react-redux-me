@@ -1,13 +1,11 @@
 import React from "react";
 
-const Posts = ({button}) => {
+const Posts = ({isShow,button}) => {
   return(
     <div>
-      {button}
       <h2>Posts</h2>
-      <p>aaa</p>
-      <p>bbb</p>
-      <p>ccc</p>
+      {button}
+      {isShow===true?<div><p>aaa</p><p>aaa</p><p>aaa</p></div>:""}
     </div>
   )
 }

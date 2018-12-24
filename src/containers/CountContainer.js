@@ -25,21 +25,24 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
   return (
     <div>
       <Projects
-        button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
+        isShow={toggles[0]}
+        button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
         items={projectContents.map((item,index)=>{
           return(<ProjectItem key={index} title={item.title} link={item.link} />)
         })}
       />
 
       <Contacts
-        button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
+        isShow={toggles[1]}
+        button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
         items={contactContents.map((item,index)=>{
           return(<ContactItem key={index} title={item.title} link={item.link} />)
         })}
       />
 
       <Posts
-        button={<PlusButton isShow={true} handler={() => console.log("aa")} />}
+        isShow={toggles[2]}
+        button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
       
     </div>

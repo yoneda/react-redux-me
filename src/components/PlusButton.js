@@ -1,9 +1,12 @@
 import React from "react";
 
-const OpenButton = ({isShow, handler}) => {
+const OpenButton = ({isActive, openHandler, closeHandler}) => {
   return(
     <div>
-      <button onClick={handler}>+</button>
+      {isActive===true?
+      <button onClick={closeHandler}>-</button>:
+      <button onClick={openHandler}>+</button>
+      }
     </div>
   )
 }
