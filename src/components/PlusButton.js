@@ -5,8 +5,8 @@ import minus from "../resources/minusButton.svg";
 
 const PlusButton = ({isActive, openHandler, closeHandler}) => {
   const styles = css`
-  width: 22px;
-  height: 22px;
+  width: 36px;
+  height: 36px;
   border: 1px solid #b3b3b3;
   border-style: dashed;
   display:flex;

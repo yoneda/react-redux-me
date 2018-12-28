@@ -1,6 +1,16 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx,css } from '@emotion/core'
 
 const About = ({isShow,button}) => {
+  const wrapStyle = css`
+  display:flex;
+  `
+  const buttonStyle = css`
+  width: 36px;
+  height:36px;
+  `
+  const titleStyle = css`
+  `
   const aboutme = () => {
     return(
       <div>
@@ -12,8 +22,10 @@ const About = ({isShow,button}) => {
   }
   return(
     <div>
-      <h2>About</h2>
-      {button}
+      <div css={wrapStyle}>
+        <div css={buttonStyle}>{button}</div>
+        <div css={titleStyle}><h2>About</h2></div>
+      </div>
       {isShow===true?aboutme():""}
     </div>
   )

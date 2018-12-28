@@ -42,9 +42,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
       <About
         isShow={toggles[0]}
         button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
-        items={projectContents.map((item,index)=>{
-          return(<ProjectItem key={index} title={item.title} link={item.link} />)
-        })}
       />
 
       <Projects
@@ -61,11 +58,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         items={contactContents.map((item,index)=>{
           return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
         })}
-      />
-
-      <Posts
-        isShow={toggles[3]}
-        button={<PlusButton isActive={toggles[3]} openHandler={()=>openContentHandler(3)} closeHandler={()=>closeContentHandler(3)} />}
       />
 
     </div>
