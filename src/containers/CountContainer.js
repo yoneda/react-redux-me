@@ -16,6 +16,9 @@ import Posts from "../components/Posts";
 
 import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
 import ProjectKakeiboIcon from "../resources/projectKakeiboIcon.svg";
+import instagram from "../resources/instagram.svg";
+import twitter from "../resources/twitter.svg";
+import github from "../resources/github.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
@@ -55,9 +58,21 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
 
-      <div style={{width:"200px"}}>
+      <div style={{width:"50px"}}>
         <a href="http://google.com" target="__blank">
-        <span dangerouslySetInnerHTML={{__html:ProjectKakeiboIcon}} />
+        <span dangerouslySetInnerHTML={{__html:instagram}} />
+        </a>
+      </div>
+
+      <div style={{width:"50px"}}>
+        <a href="http://google.com" target="__blank">
+        <span dangerouslySetInnerHTML={{__html:twitter}} />
+        </a>
+      </div>
+
+      <div style={{width:"50px"}}>
+        <a href="http://google.com" target="__blank">
+        <span dangerouslySetInnerHTML={{__html:github}} />
         </a>
       </div>
 
