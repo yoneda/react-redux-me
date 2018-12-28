@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import Background from "../components/Background";
 import Bio from "../components/Bio";
+import MoonButton from "../components/MoonButton";
 import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
 import ProjectItem from "../components/ProjectItem";
@@ -13,7 +15,6 @@ import Posts from "../components/Posts";
 
 import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
 import ProjectKakeiboIcon from "../resources/projectKakeiboIcon.svg";
-import logo from "../resources/logo.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
@@ -27,8 +28,10 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 
   return (
     <div>
+      <Background dark={dark} />
+      <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
       <Bio />
-      
+
       <Projects
         isShow={toggles[0]}
         button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
