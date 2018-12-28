@@ -8,6 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::selection{
+  background-color:deeppink;
+}
 
 p{
   color: #b3b3b3;

@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core'
 
+const style = css`
+display: flex;
+`
 const Contacts = ({isShow, button, items}) => {
-  const style = css`
-  display: flex;
-  `
   return(
     <div>
       <h2>Contacts</h2>
