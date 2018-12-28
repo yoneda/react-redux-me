@@ -9,8 +9,8 @@ top: 0;
 bottom: 0;
 z-index: -1;
 `
-const Background = ({ dark }) => {
-  const color = dark ? "black" : "white";
+const Background = ({ isDarkmode }) => {
+  const color = isDarkmode ? "black" : "white";
   const style = css`${base};background-color:${color};`;
   return(
     <div css={style}>

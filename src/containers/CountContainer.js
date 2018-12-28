@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Background from "../components/Background";
+import UpdateGrobalCss from "../components/UpdateGrobalCss";
 import Bio from "../components/Bio";
 import MoonButton from "../components/MoonButton";
 import Projects from "../components/Projects";
@@ -28,7 +29,8 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 
   return (
     <div>
-      <Background dark={dark} />
+      <Background isDarkmode={dark} />
+      <UpdateGrobalCss isDarkmode={dark} />
       <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
       <Bio />
 
