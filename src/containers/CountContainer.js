@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import Bio from "../components/Bio";
 import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
 import ProjectItem from "../components/ProjectItem";
@@ -11,6 +12,8 @@ import ContactItem from "../components/ContactItem";
 import Posts from "../components/Posts";
 
 import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
+import ProjectKakeiboIcon from "../resources/projectKakeiboIcon.svg";
+import logo from "../resources/logo.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
@@ -24,6 +27,8 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 
   return (
     <div>
+      <Bio />
+      
       <Projects
         isShow={toggles[0]}
         button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
@@ -44,7 +49,13 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
-      
+
+      <div style={{width:"200px"}}>
+        <a href="http://google.com" target="__blank">
+        <span dangerouslySetInnerHTML={{__html:ProjectKakeiboIcon}} />
+        </a>
+      </div>
+
     </div>
   );
 };
