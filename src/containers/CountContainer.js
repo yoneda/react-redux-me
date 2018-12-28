@@ -23,11 +23,12 @@ import github from "../resources/github.svg";
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
     {title:"kakeibo", link:"http://google.com"},
-    {title:"2 posts in a week", link:"http://google.com"}
+    {title:"2 posts in a week", link:"http://google.com"},
   ];
   const contactContents = [
-    {title:"kakeibo", link:"http://google.com"},
-    {title:"2 posts in a week", link:"http://google.com"}
+    {title:"twitter", link:"http://twitter.com/yonedaco", svg:twitter},
+    {title:"github", link:"http://github.com/yoneda", svg:github},
+    {title:"instagram", link:"http://instagram.com/", svg:instagram},
   ];
 
   return (
@@ -49,7 +50,7 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         isShow={toggles[1]}
         button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
         items={contactContents.map((item,index)=>{
-          return(<ContactItem key={index} title={item.title} link={item.link} />)
+          return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
         })}
       />
 
@@ -57,24 +58,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
-
-      <div style={{width:"50px"}}>
-        <a href="http://google.com" target="__blank">
-        <span dangerouslySetInnerHTML={{__html:instagram}} />
-        </a>
-      </div>
-
-      <div style={{width:"50px"}}>
-        <a href="http://google.com" target="__blank">
-        <span dangerouslySetInnerHTML={{__html:twitter}} />
-        </a>
-      </div>
-
-      <div style={{width:"50px"}}>
-        <a href="http://google.com" target="__blank">
-        <span dangerouslySetInnerHTML={{__html:github}} />
-        </a>
-      </div>
 
     </div>
   );
