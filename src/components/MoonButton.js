@@ -15,6 +15,7 @@ const MoonButton = ({isDarkmode, onHandler, offHandler}) => {
   cursor: pointer;
   `;
   const moon = isDarkmode ? moonFill : moonNormal;
+  console.log(moon);
   const handler = isDarkmode ? offHandler : onHandler;
   return(
     <div css={styles} onClick={handler}>
