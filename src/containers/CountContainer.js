@@ -15,10 +15,10 @@ import ContactItem from "../components/ContactItem";
 import Posts from "../components/Posts";
 
 import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
-import ProjectKakeiboIcon from "../resources/projectKakeiboIcon.svg";
 import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
+import moon from "../resources/moon.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
@@ -37,7 +37,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
       <UpdateGrobalCss isDarkmode={dark} />
       <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
       <Bio />
-
       <Projects
         isShow={toggles[0]}
         button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}

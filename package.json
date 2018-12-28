@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.5",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-redux": "^5.0.7",
     "redux": "^3.5.2"
   },

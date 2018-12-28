@@ -1,6 +1,0 @@
-<svg width="200px" height="100px" viewbox="0 0 200 100">
-  <!-- 長方形 -->
-  <rect x="0" y="0" width="200" height="100" rx="20" ry="20" fill="deeppink"/>
-  <!-- テキスト -->
-  <text x="22" y="59" fill="white" style="font-size:18px;">2 posts in a week</text>
-</svg>
