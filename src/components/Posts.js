@@ -5,7 +5,7 @@ const containerStyle = css`
 display: grid;
 grid-template:
 "icon title" 40px
-"content content" 160px /
+"content content" 1fr /
 40px 1fr;
 `
 const iconStyle = css`
@@ -25,7 +25,7 @@ background:navajowhite;
 const Posts = ({isShow, button}) => {
   return(
     <div css={containerStyle}>
-      <div css={iconStyle}>icon</div>
+      <div css={iconStyle}>{button}</div>
       <div css={titleStyle}>Projects</div>
       {isShow?
       <div css={contentStyle}>

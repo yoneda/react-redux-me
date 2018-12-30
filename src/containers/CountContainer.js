@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 
 import Background from "../components/Background";
 import UpdateGrobalCss from "../components/UpdateGrobalCss";
-import Bio from "../components/Bio";
 import MoonButton from "../components/MoonButton";
+import Title from "../components/Title";
+import Description from "../components/Description";
 import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
 import ProjectItem from "../components/ProjectItem";
@@ -20,6 +21,7 @@ import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 import moon from "../resources/moon.svg";
+import buttonBase from "../resources/buttonBase.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
@@ -34,54 +36,35 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 
   return (
     <div>
-      {/*
       <Background isDarkmode={dark} />
       <UpdateGrobalCss isDarkmode={dark} />
-      <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
-      <Bio />
 
-      <About
+      <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
+      <Title />
+      <Description />
+
+      <Projects
         isShow={toggles[0]}
         button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
+        items={projectContents.map((item,index)=>{
+          return(<ProjectItem key={index} title={item.title} link={item.link} />)
+        })}
       />
 
-      <Projects
+      <Contacts
         isShow={toggles[1]}
         button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
-        items={projectContents.map((item,index)=>{
-          return(<ProjectItem key={index} title={item.title} link={item.link} />)
+        items={contactContents.map((item,index)=>{
+          return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
         })}
       />
 
-      <Contacts
+      <Posts
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
-        items={contactContents.map((item,index)=>{
-          return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
-        })}
-      />
-      */}
-      {/*
-      <Projects
-        isShow={true}
-        button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
-        items={projectContents.map((item,index)=>{
-          return(<ProjectItem key={index} title={item.title} link={item.link} />)
-        })}
-      />*/}
-      {/*
-      <Contacts
-        isShow={true}
-        button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
-        items={contactContents.map((item,index)=>{
-          return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
-        })}
-      />*/}
-      <Posts
-        isShow={true}
-        button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
       />
 
+      <div style={{width:"40px"}}dangerouslySetInnerHTML={{__html:buttonBase}}></div>
     </div>
   );
 };

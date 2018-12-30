@@ -1,24 +1,42 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core';
-import plus from "../resources/plusButton.svg";
-import minus from "../resources/minusButton.svg";
 
+const buttonSvgStyle = css`
+fill: white;
+stroke: #DADADA;
+stroke-width: 1px;
+`
+
+const lineStyle = css`
+stroke: black;
+stroke-width: 4px;
+stroke-linecap: round;
+`
+
+const renderPlusSvg = ()=>{
+  return(
+    <svg css={{width:"40px",height:"40px"}}>
+      <circle css={buttonSvgStyle} cx="20" cy="20" r="19.5" />
+      <line css={lineStyle} x1="13" y1="20" x2="27" y2="20"/>
+      <line css={lineStyle} x1="20" y1="13" x2="20" y2="27"/>
+    </svg>
+  )
+}
+
+const renderMinusSvg = () => {
+  return(
+    <svg css={{width:"40px",height:"40px"}}>
+      <circle css={buttonSvgStyle} cx="20" cy="20" r="19.5" />
+      <line css={lineStyle} x1="13" y1="20" x2="27" y2="20"/>
+    </svg>
+  )
+}
 const PlusButton = ({isActive, openHandler, closeHandler}) => {
-  const styles = css`
-  width: 36px;
-  height: 36px;
-  border: 1px solid #b3b3b3;
-  border-style: dashed;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  `;
-  const look = isActive ? minus : plus;
+  const render = isActive ? renderMinusSvg : renderPlusSvg;
   const handler = isActive ? closeHandler : openHandler;
   return(
-    <div css={styles} onClick={handler}>
-    <div css={{width:"22px",height:"22px"}} dangerouslySetInnerHTML={{__html:look}}></div>
+    <div onClick={handler}>
+      {render()}
     </div>
   )
 }
