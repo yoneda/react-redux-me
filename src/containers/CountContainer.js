@@ -34,6 +34,7 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 
   return (
     <div>
+      {/*
       <Background isDarkmode={dark} />
       <UpdateGrobalCss isDarkmode={dark} />
       <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
@@ -57,6 +58,14 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
         items={contactContents.map((item,index)=>{
           return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
+        })}
+      />
+      */}
+      <Projects
+        isShow={true}
+        button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
+        items={projectContents.map((item,index)=>{
+          return(<ProjectItem key={index} title={item.title} link={item.link} />)
         })}
       />
 

@@ -10,10 +10,11 @@ const About = ({isShow,button}) => {
   height:36px;
   `
   const titleStyle = css`
+  user-select:text;
   `
   const aboutme = () => {
     return(
-      <div>
+      <div css={titleStyle}>
         <p>Text text text text</p>
         <p>Text text text text</p>
         <p>Text text text text</p>
