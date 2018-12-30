@@ -33,7 +33,7 @@ const Posts = ({isShow, button}) => {
     <div css={containerStyle}>
       <div css={iconStyle}>{button}</div>
       <div css={titleStyle}>
-        <h3 css={titleTextStyle}>Projects</h3>
+        <h3 css={titleTextStyle}>Posts</h3>
       </div>
       {isShow?
       <div css={contentStyle}>

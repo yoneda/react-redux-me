@@ -14,9 +14,17 @@ align-items: center;
 const itemStyle = css`
 width: 90px;
 height: 50px;
-background-color:deeppink;
+background-color: deeppink;
 border-radius: 10px;
+display:flex;
+justify-content:center;
+align-items:center;
+`
+
+const itemTextStyle = css`
 color:white;
+text-align:center;
+font-size:14px;
 `
 
 const linkStyle = css`
@@ -27,7 +35,9 @@ const ProjectItem = ({title,link}) => {
   return(
     <div css={containerStyle }>
       <a css={linkStyle} href="google.com" target="__black">
-        <div css={itemStyle}>{title}</div>
+        <div css={itemStyle}>
+        <span css={itemTextStyle}>{title}</span>
+        </div>
       </a>
     </div>
   )

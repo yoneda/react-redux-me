@@ -22,8 +22,8 @@ import github from "../resources/github.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
-    {title:"kakeibo", link:"http://google.com"},
-    {title:"2 posts in a week", link:"http://google.com"},
+    {title:"Kakeibo", link:"http://google.com"},
+    {title:"Weekly post", link:"http://google.com"},
   ];
   const contactContents = [
     {title:"twitter", link:"http://twitter.com/yonedaco", svg:twitter},
