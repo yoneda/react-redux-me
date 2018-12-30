@@ -1,26 +1,37 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core'
 
-const contentStyle = css`
-display:flex;
+const containerStyle = css`
+display: grid;
+grid-template:
+"icon title" 40px
+"content content" 160px /
+40px 1fr;
 `
-const wrapStyle = css`
-  display:flex;
-  `
-const buttonStyle = css`
-  width: 36px;
-  height:36px;
-  `
+const iconStyle = css`
+grid-area: icon;
+background:lightblue;
+`
+const titleStyle = css`
+grid-area: title;
+background:aquamarine;
+`
+
+const contentStyle = css`
+grid-area: content;
+background:navajowhite;
+`
+
+const itemContainerStyle = css`
+display: flex;
+`
+
 const Contacts = ({isShow, button, items}) => {
   return(
-    <div>
-      <div css={wrapStyle}>
-        <div css={buttonStyle}>{button}</div>
-        <h2>Contact</h2>
-      </div>
-      {isShow===true?
-        <div css={contentStyle}>{items}</div>
-      :""}
+    <div css={containerStyle}>
+      <div css={iconStyle}>icon</div>
+      <div css={titleStyle}>Contacts</div>
+      {isShow?<div css={[contentStyle, itemContainerStyle]}>{items}</div>:""}
     </div>
   )
 }

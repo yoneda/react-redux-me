@@ -26,7 +26,7 @@ text-decoration: none;
 const ProjectItem = ({title,link}) => {
   return(
     <div css={containerStyle }>
-      <a css={linkStyle} href="google.com">
+      <a css={linkStyle} href="google.com" target="__black">
         <div css={itemStyle}>{title}</div>
       </a>
     </div>

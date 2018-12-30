@@ -26,16 +26,6 @@ const itemContainerStyle = css`
 display: flex;
 `
 
-const renderContent = (items) => {
-  return(
-    <div css={contentStyle}>
-    {items.map((item)=>{
-      
-    })}
-    </div>
-  )
-}
-
 const Projects = ({isShow, button, items}) => {
   return(
     <div css={containerStyle}>

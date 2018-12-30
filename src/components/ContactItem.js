@@ -1,27 +1,30 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core'
 
-const styles = css`
-width: 100px;
-height: 100px;
+const containerStyle = css`
+width: 120px;
+height: 120px;
 border: 1px solid #b3b3b3;
-border-style: dashed;
-margin-right: 10px;
-display:flex;
+margin: 20px 20px 20px 0px;
+display: flex;
 justify-content: center;
 align-items: center;
-`;
+`
+
+const svgStyle = css`
+width: 50px;
+height: 50px;
+`
 
 const ContactItem= ({title,link,svg}) => {
   return(
-    <div>
-    <a href={link} target="__black">
-    <div css={styles}>
-    <div style={{width:"50px"}}dangerouslySetInnerHTML={{__html:svg}}></div>
-    </div>
-    </a>
+    <div css={containerStyle}>
+      <a href={link} target="__black">
+        <div css={svgStyle} dangerouslySetInnerHTML={{__html:svg}}></div>
+      </a>
     </div>
   )
 }
 
 export default ContactItem
+
