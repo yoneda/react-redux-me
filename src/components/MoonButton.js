@@ -1,25 +1,19 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core';
-import moonNormal from "../resources/moon.svg";
+import moonButton from "../resources/moonButton.svg";
 import moonFill from "../resources/moonFill.svg";
 
+const style = css`
+width: 40px;
+height: 40px;
+`
+
 const MoonButton = ({isDarkmode, onHandler, offHandler}) => {
-  const styles = css`
-  width: 40px;
-  height: 40px;
-  border: 1px solid #b3b3b3;
-  border-style: dashed;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  `;
-  const moon = isDarkmode ? moonFill : moonNormal;
-  console.log(moon);
+  const moon = isDarkmode ? moonFill : moonButton;
   const handler = isDarkmode ? offHandler : onHandler;
   return(
-    <div css={styles} onClick={handler}>
-    <div css={{width:"22px"}} dangerouslySetInnerHTML={{__html:moon}}></div>
+    <div onClick={handler}>
+      <div css={style} dangerouslySetInnerHTML={{__html:moon}}></div>
     </div>
   )
 }

@@ -19,8 +19,6 @@ import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "
 import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
-import moon from "../resources/moon.svg";
-import buttonBase from "../resources/buttonBase.svg";
 
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
