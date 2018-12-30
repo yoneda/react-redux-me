@@ -10,7 +10,6 @@ import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
 import ProjectItem from "../components/ProjectItem";
 
-import About from "../components/About";
 import Contacts from "../components/Contacts";
 import ContactItem from "../components/ContactItem";
 
@@ -63,8 +62,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
-
-      <div style={{width:"40px"}}dangerouslySetInnerHTML={{__html:buttonBase}}></div>
     </div>
   );
 };

@@ -15,6 +15,12 @@ background:lightblue;
 const titleStyle = css`
 grid-area: title;
 background:aquamarine;
+display: flex;
+align-items: center;
+`
+
+const titleTextStyle = css`
+font-size: 24px;
 `
 
 const contentStyle = css`
@@ -30,7 +36,9 @@ const Projects = ({isShow, button, items}) => {
   return(
     <div css={containerStyle}>
       <div css={iconStyle}>{button}</div>
-      <div css={titleStyle}>Projects</div>
+      <div css={titleStyle}>
+        <h3 css={titleTextStyle}>Projects</h3>
+      </div>
       {isShow?<div css={[contentStyle, itemContainerStyle]}>{items}</div>:""}
     </div>
   )
