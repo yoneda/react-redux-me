@@ -32,7 +32,8 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
   ];
 
   return (
-    <div>
+    <div style={{width:"800px",margin:"auto"}}>
+      <div style={{width:"760px",margin:"20px 20px 20px 20px"}}>
       <Background isDarkmode={dark} />
       <UpdateGrobalCss isDarkmode={dark} />
 
@@ -60,6 +61,7 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
       />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 import { jsx,css } from '@emotion/core'
 
 const containerStyle = css`
+margin-bottom: 10px;
 display: grid;
 grid-template:
 "icon title" 40px
@@ -10,22 +11,20 @@ grid-template:
 `
 const iconStyle = css`
 grid-area: icon;
-background:lightblue;
 `
 const titleStyle = css`
 grid-area: title;
-background:aquamarine;
 display: flex;
 align-items: center;
 `
 
 const titleTextStyle = css`
 font-size: 24px;
+margin-left:10px;
 `
 
 const contentStyle = css`
 grid-area: content;
-background:navajowhite;
 `
 
 const Posts = ({isShow, button}) => {

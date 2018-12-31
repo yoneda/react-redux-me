@@ -4,8 +4,8 @@ import { jsx,css } from '@emotion/core'
 const containerStyle = css`
 width: 160px;
 height: 120px;
-border: 1px solid #b3b3b3;
-margin: 20px 20px 20px 0px;
+border: 1px dashed #dadada;
+margin: 10px 10px 10px 0px;
 display: flex;
 justify-content: center;
 align-items: center;
