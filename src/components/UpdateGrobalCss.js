@@ -13,7 +13,7 @@ const UpdateGrobalCss = ({ isDarkmode }) => {
     <div>
       <Global
       styles = {css`
-      .testtest{
+      .background{
         background-color: ${color};
         animation-name: ${changeColor};
         animation-duration: 0.5s;
