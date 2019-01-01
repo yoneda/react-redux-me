@@ -5,7 +5,7 @@ const containerStyle = css`
 width: 120px;
 height: 120px;
 border: 1px dashed #dadada;
-margin: 10px 10px 10px 0px;
+margin: 10px 10px 0px 0px;
 display: flex;
 justify-content: center;
 align-items: center;
