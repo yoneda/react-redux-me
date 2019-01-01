@@ -35,7 +35,7 @@ const Contacts = ({isShow, button, items}) => {
     <div css={containerStyle}>
       <div css={iconStyle}>{button}</div>
       <div css={titleStyle}>
-        <h3 css={titleTextStyle}>Contacts</h3>
+        <h3 css={titleTextStyle} className="chameleonText" >Contacts</h3>
       </div>
       {isShow?<div css={[contentStyle, itemContainerStyle]}>{items}</div>:""}
     </div>

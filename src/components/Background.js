@@ -12,7 +12,7 @@ background-color:none;
 `
 const Background = ({ isDarkmode }) => {
   return(
-    <div css={style} className="background">
+    <div css={style} className="chameleonBackground">
     </div>
   )
 };
