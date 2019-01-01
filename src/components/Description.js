@@ -2,8 +2,12 @@
 import { jsx,css } from '@emotion/core'
 
 const descriptionStyle = css`
+margin-bottom: 20px;
+`
+
+const descriptionTextStyle = css`
 font-size: 24px;
-line-height: 2.0;
+line-height: 1.2;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
 `
@@ -12,9 +16,9 @@ font-weight: 400;
 // Reactでは<br>や/nでは改行が効かないので、\nの文字列でsplitしてmapして<p>タグとして出力させるしかない。
 const Description = ({}) => {
   return(
-    <div css={[descriptionStyle]}>
-      <p>Frontend Developper living in Japan</p>
-      <p>Interested in React, Python, and Web Design</p>
+    <div css={descriptionStyle}>
+      <p css={descriptionTextStyle}>Frontend Developper living in Japan</p>
+      <p css={descriptionTextStyle}>Interested in React, Python, and Web Design</p>
     </div>
   )
 }
