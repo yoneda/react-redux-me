@@ -36,7 +36,7 @@ const renderMoonSvg = (isDarkmode) => {
   animation-name: ${keyframe};
   `
   return(
-    <svg css={{width:"40px",height:"40px"}}>
+    <svg css={{width:"40px",height:"40px",cursor:"pointer"}}>
       <circle css={buttonSvgStyle} cx="20" cy="20" r="19.5" />
       <path css={[moonSvgStyle,moonSvgAnimationStyle]} d="M27,24.6c-1.5,1.5-3.5,2.4-5.8,2.4s-4.3-0.9-5.8-2.4S13,21.1,13,18.8s0.9-4.3,2.4-5.8L27,24.6z"/>
     </svg>
