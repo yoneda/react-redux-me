@@ -21,6 +21,8 @@ align-items: center;
 const titleTextStyle = css`
 font-size: 24px;
 margin-left:10px;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
 `
 
 const contentStyle = css`
