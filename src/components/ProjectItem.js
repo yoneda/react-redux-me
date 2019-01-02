@@ -25,6 +25,8 @@ const itemTextStyle = css`
 color:white;
 text-align:center;
 font-size:14px;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
 `
 
 const linkStyle = css`
