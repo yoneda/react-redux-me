@@ -27,6 +27,24 @@ font-weight: 700;
 
 const contentStyle = css`
 grid-area: content;
+margin-top: 10px;
+margin-bottom: 10px;
+`
+
+const contentTextStyle = css`
+font-size: 18px;
+line-height: 1.5;
+font-family: 'Noto Sans JP', sans-serif;
+font-weight: 500;
+color: #b3b3b3;
+`
+
+const contentLinkTextStyle = css`
+color: #b3b3b3;
+&:hover{
+  background-color: #b3b3b3;
+  color: white;
+}
 `
 
 const Posts = ({isShow, button, articles}) => {
@@ -40,9 +58,9 @@ const Posts = ({isShow, button, articles}) => {
       <div css={contentStyle}>
         {articles.map((article,index)=>{
           return (
-            <p key={index}>
+            <p key={index} css={contentTextStyle}>
               {article.title}{" "}
-              <a href={article.link} target="__blank">#</a>
+              <a css={contentLinkTextStyle} href={article.link} target="__blank">#</a>
             </p>
           )
         })}

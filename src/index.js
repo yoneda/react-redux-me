@@ -15,7 +15,7 @@ const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.
 store.dispatch(getOnLoading()); // loadingをオン
 requestQiitaPosts((posts)=>{
   store.dispatch(getOffLoading()); // loadingをオフ
-  store.dispatch(getAddPosts(posts.splice(0,3))); //最初から3件のみをstoreで管理
+  store.dispatch(getAddPosts(posts.splice(0,5))); //最初から3件のみをstoreで管理
 })
 
 render(

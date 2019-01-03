@@ -10,6 +10,7 @@ font-size: 24px;
 line-height: 1.2;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
+color: #b3b3b3;
 `
 
 // TODO: 引数を渡して自己紹介文を表示できるようにする。
