@@ -20,7 +20,7 @@ import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
+const CountContainer = ({ toggles, dark, loading, posts, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
     {title:"Kakeibo", link:"http://google.com"},
     {title:"Weekly post", link:"http://google.com"},
@@ -30,7 +30,6 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
     {title:"github", link:"http://github.com/yoneda", svg:github},
     {title:"instagram", link:"http://instagram.com/", svg:instagram},
   ];
-
   return (
     <div style={{width:"800px",margin:"auto"}}>
       <div style={{width:"760px",margin:"20px 20px 20px 20px"}}>
@@ -69,7 +68,9 @@ const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler
 const mapStateToProps = state => {
   return {
     toggles: state.toggles,
-    dark: state.dark
+    dark: state.dark,
+    loading: state.loading,
+    posts: state.posts
   };
 };
 
@@ -78,7 +79,7 @@ const mapDispatchToProps = dispatch => {
     openContentHandler: index => dispatch(getOpenContent(index)),
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
-    offDarkmodeHandler: () => dispatch(getOffDarkmode())
+    offDarkmodeHandler: () => dispatch(getOffDarkmode()),
   };
 };
 

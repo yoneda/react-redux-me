@@ -10,8 +10,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.3.0",
-    "superagent": "^4.1.0"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -39,7 +38,6 @@
     "css-loader": "^2.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^3.0.1",
-    "qs": "^6.6.0",
     "storybook": "^1.0.0",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
