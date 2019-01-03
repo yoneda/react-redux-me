@@ -25,3 +25,22 @@ export const getOffDarkmode = () => {
     type: OFF_DARKMODE
   }
 }
+
+export const getOnLoading = () => {
+  return {
+    type: ON_LOADING
+  }
+}
+
+export const getOffLoading = () => {
+  return {
+    type: OFF_LOADING
+  }
+}
+
+export const getAddPosts = (articles) => {
+  return {
+    type: ADD_POSTS,
+    data: {articles:articles}
+  }
+}
