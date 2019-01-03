@@ -3,7 +3,7 @@ import { jsx,css } from '@emotion/core'
 
 const titleNameStyle = css`
 font-size:80px;
-line-height: 1.0;
+line-height: 1.2;
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
 `

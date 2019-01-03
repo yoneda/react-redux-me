@@ -1,6 +1,10 @@
 /** @jsx jsx */
 import { jsx,css } from '@emotion/core';
 
+const wrap = css`
+user-select :none;
+`
+
 const buttonSvgStyle = css`
 fill: white;
 stroke: #DADADA;
@@ -35,7 +39,7 @@ const PlusButton = ({isActive, openHandler, closeHandler}) => {
   const render = isActive ? renderMinusSvg : renderPlusSvg;
   const handler = isActive ? closeHandler : openHandler;
   return(
-    <div onClick={handler}>
+    <div css={wrap} onClick={handler}>
       {render()}
     </div>
   )

@@ -3,6 +3,10 @@ import { jsx,css, keyframes} from '@emotion/core';
 import moonButton from "../resources/moonButton.svg";
 import moonFill from "../resources/moonFill.svg";
 
+const wrap = css`
+user-select :none;
+`
+
 const buttonSvgStyle = css`
 fill: white;
 stroke: #DADADA;
@@ -47,7 +51,7 @@ const MoonButton = ({isDarkmode, onHandler, offHandler}) => {
   const moon = isDarkmode ? moonButton : moonButton;
   const handler = isDarkmode ? offHandler : onHandler;
   return(
-    <div onClick={handler}>
+    <div css={wrap} onClick={handler}>
       {renderMoonSvg(isDarkmode)}
     </div>
   )
