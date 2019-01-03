@@ -47,7 +47,8 @@ const reducer = (state={},action)=>{
     const initialState = {
       count: 1,
       toggles: [true,false,false,false],
-      dark: false
+      dark: false,
+      loading: false,
     }
     return initialState;
   }

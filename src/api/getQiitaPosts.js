@@ -12,7 +12,7 @@ const getQiitaPosts = (callback) => {
   };
   axios(options).then((res)=>{
     const articles = res.data.map((d)=>{
-      const article = {title:d.title, link:d.link};
+      const article = {title:d.title, link:d.url};
       return article;
     })
     callback(articles);
