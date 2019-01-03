@@ -29,7 +29,7 @@ const contentStyle = css`
 grid-area: content;
 `
 
-const Posts = ({isShow, button}) => {
+const Posts = ({isShow, button, articles}) => {
   return(
     <div css={containerStyle}>
       <div css={iconStyle}>{button}</div>
@@ -38,9 +38,14 @@ const Posts = ({isShow, button}) => {
       </div>
       {isShow?
       <div css={contentStyle}>
-        <p>text text text text text text #</p>
-        <p>text text text text text text #</p>
-        <p>text text text text text text #</p>
+        {articles.map((article,index)=>{
+          return (
+            <p key={index}>
+              {article.title}{" "}
+              <a href={article.link} target="__blank">#</a>
+            </p>
+          )
+        })}
       </div>:
       ""}
     </div>

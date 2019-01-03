@@ -70,7 +70,6 @@ const reducer = (state={},action)=>{
 
   else{
     const initialState = {
-      count: 1,
       toggles: [true,false,false,false],
       dark: false,
       loading: false,

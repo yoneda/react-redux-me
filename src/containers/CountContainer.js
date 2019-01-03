@@ -20,7 +20,7 @@ import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-const CountContainer = ({ toggles, dark, loading, posts, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
+const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
     {title:"Kakeibo", link:"http://google.com"},
     {title:"Weekly post", link:"http://google.com"},
@@ -59,6 +59,7 @@ const CountContainer = ({ toggles, dark, loading, posts, openContentHandler, clo
       <Posts
         isShow={toggles[2]}
         button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
+        articles={articles}
       />
       </div>
     </div>
@@ -70,7 +71,7 @@ const mapStateToProps = state => {
     toggles: state.toggles,
     dark: state.dark,
     loading: state.loading,
-    posts: state.posts
+    articles: state.posts
   };
 };
 
