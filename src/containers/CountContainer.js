@@ -28,7 +28,7 @@ const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, 
   const contactContents = [
     {title:"twitter", link:"http://twitter.com/yonedaco", svg:twitter},
     {title:"github", link:"http://github.com/yoneda", svg:github},
-    {title:"instagram", link:"http://instagram.com/", svg:instagram},
+    {title:"instagram", link:"http://instagram.com/yonedaco", svg:instagram},
   ];
   return (
     <div style={{width:"800px",margin:"auto"}}>
