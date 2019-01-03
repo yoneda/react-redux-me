@@ -20,12 +20,7 @@ import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-import getQiitaPosts from "../api/getQiitaPosts";
-
 const CountContainer = ({ toggles, dark, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
-  getQiitaPosts((articles)=>{
-    console.log(articles);
-  });
   const projectContents = [
     {title:"Kakeibo", link:"http://google.com"},
     {title:"Weekly post", link:"http://google.com"},

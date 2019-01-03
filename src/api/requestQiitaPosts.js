@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
 
-const getQiitaPosts = (callback) => {
+const requestQiitaPosts = (callback) => {
   const data = {page:"1",per_page:"3"}
   const url = "https://qiita.com/api/v2/authenticated_user/items"
   const options = {
@@ -19,4 +19,4 @@ const getQiitaPosts = (callback) => {
   })
 }
 
-export default getQiitaPosts;
+export default requestQiitaPosts;

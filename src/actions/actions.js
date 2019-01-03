@@ -1,4 +1,4 @@
-import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE} from "../constants/constants.js";
+import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS} from "../constants/constants.js";
 
 export const getOpenContent = (index) => {
   return {
