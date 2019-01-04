@@ -22,8 +22,8 @@ import github from "../resources/github.svg";
 
 const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
   const projectContents = [
-    {title:"Kakeibo", link:"http://google.com"},
-    {title:"Weekly post", link:"http://google.com"},
+    {title:"Kakeibo", link:"https://react-redux-project.netlify.com/"},
+    {title:"Weekly post", link:"https://react-redux-project.netlify.com/"},
   ];
   const contactContents = [
     {title:"twitter", link:"http://twitter.com/yonedaco", svg:twitter},
