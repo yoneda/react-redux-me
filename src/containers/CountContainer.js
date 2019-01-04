@@ -31,6 +31,7 @@ const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, 
     {title:"instagram", link:"http://instagram.com/yonedaco", svg:instagram},
   ];
   return (
+    <div style={{height:"100%",backgroundColor:"none"}} className="chameleonBackground">
     <div style={{width:"800px",margin:"auto"}}>
       <div style={{width:"760px",padding:"20px 20px 20px 20px"}}>
       <Background isDarkmode={dark} />
@@ -62,6 +63,7 @@ const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, 
         articles={articles}
       />
       </div>
+    </div>
     </div>
   );
 };
