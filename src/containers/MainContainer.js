@@ -9,13 +9,12 @@ import Description from "../components/Description";
 import Projects from "../components/Projects";
 import PlusButton from "../components/PlusButton";
 import ProjectItem from "../components/ProjectItem";
-
 import Contacts from "../components/Contacts";
 import ContactItem from "../components/ContactItem";
-
 import Posts from "../components/Posts";
 
 import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode, getOnMoonbuttonPressed} from "../actions/actions.js";
+
 import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
@@ -31,6 +30,8 @@ const MainContainer = ({ toggles, dark, loading, articles, moonbuttonPressed, op
     {title:"instagram", link:"http://instagram.com/yonedaco", svg:instagram},
   ];
   return (
+    // TODO: container component は主にロジックを管理するためのコンポーネントで、デザインを担当するのはpresententional component。
+    // 下記3つのdivタグは 全体のデザインをするためのPresententional componentを作成してそこに記述するべき。
     <div style={{height:"100%",backgroundColor:"none"}} className="chameleonBackground">
     <div style={{width:"800px",margin:"auto"}}>
       <div style={{width:"760px",padding:"20px 20px 20px 20px"}}>
