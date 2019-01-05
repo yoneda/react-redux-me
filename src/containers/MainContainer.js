@@ -20,7 +20,7 @@ import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-const CountContainer = ({ toggles, dark, loading, articles, moonbuttonPressed, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler, onMoonbuttonPressedHandler}) => {
+const MainContainer = ({ toggles, dark, loading, articles, moonbuttonPressed, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler, onMoonbuttonPressedHandler}) => {
   const projectContents = [
     {title:"Kakeibo", link:"https://react-redux-project.netlify.com/"},
     {title:"Weekly post", link:"https://react-redux-project.netlify.com/"},
@@ -92,4 +92,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CountContainer);
+)(MainContainer);

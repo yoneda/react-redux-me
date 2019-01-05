@@ -1,9 +1,9 @@
 import React from 'react'
-import CountContainer from "./CountContainer.js";
+import MainContainer from "./MainContainer.js";
 
 const App = () => (
   <div>
-    <CountContainer />
+    <MainContainer />
   </div>
 )
 
