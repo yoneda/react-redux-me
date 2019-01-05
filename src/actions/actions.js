@@ -1,4 +1,4 @@
-import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS} from "../constants/constants.js";
+import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS, ON_MOONBUTTONPRESSED} from "../constants/constants.js";
 
 export const getOpenContent = (index) => {
   return {
@@ -42,5 +42,11 @@ export const getAddPosts = (articles) => {
   return {
     type: ADD_POSTS,
     data: {articles:articles}
+  }
+}
+
+export const getMoonbuttonPressed = () => {
+  return {
+    type: ON_MOONPRESSED
   }
 }

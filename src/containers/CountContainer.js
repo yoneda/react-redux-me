@@ -35,7 +35,6 @@ const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, 
     <div style={{width:"800px",margin:"auto"}}>
       <div style={{width:"760px",padding:"20px 20px 20px 20px"}}>
       <Background isDarkmode={dark} />
-      <UpdateGrobalCss isDarkmode={dark} />
 
       <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
       <Title />

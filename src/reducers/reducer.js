@@ -1,4 +1,4 @@
-import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS } from "../constants/constants.js";
+import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS, ON_MOONBUTTONPRESSED} from "../constants/constants.js";
 
 const reducer = (state={},action)=>{
   if(action.type===OPEN_CONTENT){
@@ -68,12 +68,21 @@ const reducer = (state={},action)=>{
     return newState;
   }
 
+  else if(action.type===ON_MOONBUTTONPRESSED){
+    const newState = {
+      ...state,
+      moonbuttonPressed: true
+    }
+    return newState;
+  }
+
   else{
     const initialState = {
       toggles: [true,false,false,false],
       dark: false,
       loading: false,
-      posts: []
+      posts: [],
+      moonbuttonPressed: false,
     }
     return initialState;
   }
