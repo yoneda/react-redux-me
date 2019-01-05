@@ -1,6 +1,6 @@
 ## What is this
 
-yoneda's profile site implement in react-redux.
+yoneda's profile site implement in react-redux.  
 learning react-redux, css, and webdesign is main purpose.
 
 ## how to run
