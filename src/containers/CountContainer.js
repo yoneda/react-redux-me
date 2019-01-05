@@ -15,12 +15,12 @@ import ContactItem from "../components/ContactItem";
 
 import Posts from "../components/Posts";
 
-import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode } from "../actions/actions.js";
+import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode, getOnMoonbuttonPressed} from "../actions/actions.js";
 import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler }) => {
+const CountContainer = ({ toggles, dark, loading, articles, moonbuttonPressed, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler, onMoonbuttonPressedHandler}) => {
   const projectContents = [
     {title:"Kakeibo", link:"https://react-redux-project.netlify.com/"},
     {title:"Weekly post", link:"https://react-redux-project.netlify.com/"},
@@ -35,8 +35,10 @@ const CountContainer = ({ toggles, dark, loading, articles, openContentHandler, 
     <div style={{width:"800px",margin:"auto"}}>
       <div style={{width:"760px",padding:"20px 20px 20px 20px"}}>
       <Background isDarkmode={dark} />
-
-      <MoonButton isDarkmode={dark} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} />
+      {moonbuttonPressed===true ?
+        <UpdateGrobalCss isDarkmode={dark} />
+        :""}
+      <MoonButton isDarkmode={dark} isMoonbuttonPressed={moonbuttonPressed} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} pressedHandler={onMoonbuttonPressedHandler}/>
       <Title />
       <Description />
 
@@ -72,7 +74,8 @@ const mapStateToProps = state => {
     toggles: state.toggles,
     dark: state.dark,
     loading: state.loading,
-    articles: state.posts
+    articles: state.posts,
+    moonbuttonPressed: state.moonbuttonPressed,
   };
 };
 
@@ -82,6 +85,7 @@ const mapDispatchToProps = dispatch => {
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
+    onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed()),
   };
 };
 

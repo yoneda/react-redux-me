@@ -45,8 +45,8 @@ export const getAddPosts = (articles) => {
   }
 }
 
-export const getMoonbuttonPressed = () => {
+export const getOnMoonbuttonPressed = () => {
   return {
-    type: ON_MOONPRESSED
+    type: ON_MOONBUTTONPRESSED
   }
 }
