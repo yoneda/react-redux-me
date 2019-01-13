@@ -13,59 +13,98 @@ import Contacts from "../components/Contacts";
 import ContactItem from "../components/ContactItem";
 import Posts from "../components/Posts";
 
-import { getOpenContent, getCloseContent, getOnDarkmode, getOffDarkmode, getOnMoonbuttonPressed} from "../actions/actions.js";
+import {
+  getOpenContent,
+  getCloseContent,
+  getOnDarkmode,
+  getOffDarkmode,
+  getOnMoonbuttonPressed
+} from "../actions/actions.js";
 
 import instagram from "../resources/instagram.svg";
 import twitter from "../resources/twitter.svg";
 import github from "../resources/github.svg";
 
-const MainContainer = ({ toggles, dark, loading, articles, moonbuttonPressed, openContentHandler, closeContentHandler, onDarkmodeHandler, offDarkmodeHandler, onMoonbuttonPressedHandler}) => {
+const MainContainer = ({
+  toggles,
+  dark,
+  loading,
+  articles,
+  moonbuttonPressed,
+  openContentHandler,
+  closeContentHandler,
+  onDarkmodeHandler,
+  offDarkmodeHandler,
+  onMoonbuttonPressedHandler
+}) => {
   const projectContents = [
-    {title:"Kakeibo", link:"https://react-redux-project.netlify.com/"},
-    {title:"Weekly post", link:"https://react-redux-project.netlify.com/"},
+    { title: "Kakeibo", link: "https://react-redux-project.netlify.com/" },
+    { title: "Weekly post", link: "https://react-redux-project.netlify.com/" }
   ];
   const contactContents = [
-    {title:"twitter", link:"http://twitter.com/yonedaco", svg:twitter},
-    {title:"github", link:"http://github.com/yoneda", svg:github},
-    {title:"instagram", link:"http://instagram.com/yonedaco", svg:instagram},
+    { title: "twitter", link: "http://twitter.com/yonedaco", svg: twitter },
+    { title: "github", link: "http://github.com/yoneda", svg: github },
+    { title: "instagram", link: "http://instagram.com/yonedaco", svg: instagram }
   ];
   return (
     // TODO: container component は主にロジックを管理するためのコンポーネントで、デザインを担当するのはpresententional component。
     // 下記3つのdivタグは 全体のデザインをするためのPresententional componentを作成してそこに記述するべき。
-    <div style={{height:"100%",backgroundColor:"none"}} className="chameleonBackground">
-    <div style={{width:"800px",margin:"auto"}}>
-      <div style={{width:"760px",padding:"20px 20px 20px 20px"}}>
-      <Background isDarkmode={dark} />
-      {moonbuttonPressed===true ?
-        <UpdateGrobalCss isDarkmode={dark} />
-        :""}
-      <MoonButton isDarkmode={dark} isMoonbuttonPressed={moonbuttonPressed} onHandler={onDarkmodeHandler} offHandler={offDarkmodeHandler} pressedHandler={onMoonbuttonPressedHandler}/>
-      <Title />
-      <Description />
+    <div style={{ height: "100%", backgroundColor: "none" }} className="chameleonBackground">
+      <div style={{ width: "800px", margin: "auto" }}>
+        <div style={{ width: "760px", padding: "20px 20px 20px 20px" }}>
+          <Background isDarkmode={dark} />
+          {moonbuttonPressed === true ? <UpdateGrobalCss isDarkmode={dark} /> : ""}
+          <MoonButton
+            isDarkmode={dark}
+            isMoonbuttonPressed={moonbuttonPressed}
+            onHandler={onDarkmodeHandler}
+            offHandler={offDarkmodeHandler}
+            pressedHandler={onMoonbuttonPressedHandler}
+          />
+          <Title />
+          <Description />
 
-      <Projects
-        isShow={toggles[0]}
-        button={<PlusButton isActive={toggles[0]} openHandler={()=>openContentHandler(0)} closeHandler={()=>closeContentHandler(0)} />}
-        items={projectContents.map((item,index)=>{
-          return(<ProjectItem key={index} title={item.title} link={item.link} />)
-        })}
-      />
+          <Projects
+            isShow={toggles[0]}
+            button={
+              <PlusButton
+                isActive={toggles[0]}
+                openHandler={() => openContentHandler(0)}
+                closeHandler={() => closeContentHandler(0)}
+              />
+            }
+            items={projectContents.map((item, index) => {
+              return <ProjectItem key={index} title={item.title} link={item.link} />;
+            })}
+          />
 
-      <Contacts
-        isShow={toggles[1]}
-        button={<PlusButton isActive={toggles[1]} openHandler={()=>openContentHandler(1)} closeHandler={()=>closeContentHandler(1)} />}
-        items={contactContents.map((item,index)=>{
-          return(<ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />)
-        })}
-      />
+          <Contacts
+            isShow={toggles[1]}
+            button={
+              <PlusButton
+                isActive={toggles[1]}
+                openHandler={() => openContentHandler(1)}
+                closeHandler={() => closeContentHandler(1)}
+              />
+            }
+            items={contactContents.map((item, index) => {
+              return <ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />;
+            })}
+          />
 
-      <Posts
-        isShow={toggles[2]}
-        button={<PlusButton isActive={toggles[2]} openHandler={()=>openContentHandler(2)} closeHandler={()=>closeContentHandler(2)} />}
-        articles={articles}
-      />
+          <Posts
+            isShow={toggles[2]}
+            button={
+              <PlusButton
+                isActive={toggles[2]}
+                openHandler={() => openContentHandler(2)}
+                closeHandler={() => closeContentHandler(2)}
+              />
+            }
+            articles={articles}
+          />
+        </div>
       </div>
-    </div>
     </div>
   );
 };
@@ -76,7 +115,7 @@ const mapStateToProps = state => {
     dark: state.dark,
     loading: state.loading,
     articles: state.posts,
-    moonbuttonPressed: state.moonbuttonPressed,
+    moonbuttonPressed: state.moonbuttonPressed
   };
 };
 
@@ -86,7 +125,7 @@ const mapDispatchToProps = dispatch => {
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
-    onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed()),
+    onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed())
   };
 };
 
