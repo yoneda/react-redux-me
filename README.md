@@ -1,7 +1,9 @@
 ## What is this
 
 yoneda's profile site implement in react-redux.  
-learning react-redux, css, and webdesign is main purpose.
+learning react-redux, css, and webdesign is main purpose.  
+you can check my website :)  
+https://yoneda.app
 
 ## how to run
 
@@ -9,6 +11,9 @@ learning react-redux, css, and webdesign is main purpose.
 npm install // install some modules
 npm start // start app
 ```
+
+## task management
+https://trello.com/b/GOhxeZCZ/portfolio2019
 
 ## learning log
 
