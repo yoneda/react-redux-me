@@ -19,7 +19,7 @@ import {
   getOnDarkmode,
   getOffDarkmode,
   getOnMoonbuttonPressed,
-  getOpenContentAsync
+  getAddPostsAsync,
 } from "../actions/actions.js";
 
 import instagram from "../resources/instagram.svg";
@@ -37,8 +37,11 @@ const MainContainer = ({
   closeContentHandler,
   onDarkmodeHandler,
   offDarkmodeHandler,
-  onMoonbuttonPressedHandler
+  onMoonbuttonPressedHandler,
+  addPostsAsyncHandler,
 }) => {
+  // MainContainer が読み込まれた時に実行(本当はcomponentDidMountあたりに書きたい)
+
   const projectContents = [
     { title: "Kakeibo", link: "https://react-redux-project.netlify.com/" },
     { title: "Weekly post", link: "https://react-redux-project.netlify.com/" }
@@ -128,7 +131,8 @@ const mapDispatchToProps = dispatch => {
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
-    onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed())
+    onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed()),
+    addPostsAsyncHandler: () => dispatch(getAddPostsAsync()),
   };
 };
 

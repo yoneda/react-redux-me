@@ -1,4 +1,5 @@
 import { OPEN_CONTENT, CLOSE_CONTENT, ON_DARKMODE, OFF_DARKMODE, ON_LOADING, OFF_LOADING, ADD_POSTS, ON_MOONBUTTONPRESSED} from "../constants/constants.js";
+import requestQiitaPosts from "../api/requestQiitaPosts";
 
 export const getOpenContent = (index) => {
   return {
@@ -56,5 +57,15 @@ export const getAddPosts = (articles) => {
 export const getOnMoonbuttonPressed = () => {
   return {
     type: ON_MOONBUTTONPRESSED
+  }
+}
+
+export const getAddPostsAsync = () => {
+  return dispatch => {
+    dispatch(getOnLoading()); // loadingをオン
+    requestQiitaPosts((posts)=>{
+      dispatch(getOffLoading()); // loadingをオフ
+      dispatch(getAddPosts(posts.splice(0,5))); //最初から3件のみをstoreで管理
+    })
   }
 }
