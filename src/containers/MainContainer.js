@@ -18,7 +18,8 @@ import {
   getCloseContent,
   getOnDarkmode,
   getOffDarkmode,
-  getOnMoonbuttonPressed
+  getOnMoonbuttonPressed,
+  getOpenContentAsync
 } from "../actions/actions.js";
 
 import instagram from "../resources/instagram.svg";
@@ -32,6 +33,7 @@ const MainContainer = ({
   articles,
   moonbuttonPressed,
   openContentHandler,
+  openContentAsyncHandler,
   closeContentHandler,
   onDarkmodeHandler,
   offDarkmodeHandler,
@@ -69,7 +71,7 @@ const MainContainer = ({
             button={
               <PlusButton
                 isActive={toggles[0]}
-                openHandler={() => openContentHandler(0)}
+                openHandler={() => openContentAsyncHandler()}
                 closeHandler={() => closeContentHandler(0)}
               />
             }
@@ -122,6 +124,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     openContentHandler: index => dispatch(getOpenContent(index)),
+    openContentAsyncHandler: index => dispatch(getOpenContentAsync()),
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),

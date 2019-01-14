@@ -7,6 +7,14 @@ export const getOpenContent = (index) => {
   }
 }
 
+export const getOpenContentAsync = () => {
+  return dispatch => {
+    setTimeout(()=>{
+      dispatch(getOpenContent(0));
+    },1000);
+  }
+}
+
 export const getCloseContent = (index) => {
   return {
     type: CLOSE_CONTENT,
