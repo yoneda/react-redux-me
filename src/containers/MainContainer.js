@@ -22,9 +22,9 @@ import {
   getAddPostsAsync,
 } from "../actions/actions.js";
 
-import instagram from "../resources/instagram.svg";
-import twitter from "../resources/twitter.svg";
-import github from "../resources/github.svg";
+import instagram from "../resources/instagram.min.svg";
+import twitter from "../resources/twitter.min.svg";
+import github from "../resources/github.min.svg";
 
 const MainContainer = ({
   toggles,
