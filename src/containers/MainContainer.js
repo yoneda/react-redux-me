@@ -25,6 +25,7 @@ import {
 import instagram from "../resources/instagram.min.svg";
 import twitter from "../resources/twitter.min.svg";
 import github from "../resources/github.min.svg";
+import behance from "../resources/behance.min.svg";
 
 const MainContainer = ({
   toggles,
@@ -48,7 +49,8 @@ const MainContainer = ({
   const contactContents = [
     { title: "twitter", link: "http://twitter.com/yonedaco", svg: twitter },
     { title: "github", link: "http://github.com/yoneda", svg: github },
-    { title: "instagram", link: "http://instagram.com/yonedaco", svg: instagram }
+    { title: "instagram", link: "http://instagram.com/yonedaco", svg: instagram },
+    { title: "instagram", link: "https://www.behance.net/yoneda/", svg: behance }
   ];
   return (
     // TODO: container component は主にロジックを管理するためのコンポーネントで、デザインを担当するのはpresententional component。
