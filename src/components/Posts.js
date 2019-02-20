@@ -26,9 +26,10 @@ const titleTextStyle = css`
 `;
 
 const contentStyle = css`
+  border: 1px dashed #dadada;
   grid-area: content;
   margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 30px;
 `;
 
 const contentTextStyle = css`
