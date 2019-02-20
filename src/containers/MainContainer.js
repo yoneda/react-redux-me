@@ -33,7 +33,6 @@ const MainContainer = ({
   articles,
   moonbuttonPressed,
   openContentHandler,
-  openContentAsyncHandler,
   closeContentHandler,
   onDarkmodeHandler,
   offDarkmodeHandler,
@@ -74,7 +73,7 @@ const MainContainer = ({
             button={
               <PlusButton
                 isActive={toggles[0]}
-                openHandler={() => openContentAsyncHandler()}
+                openHandler={() => openContentHandler(0)}
                 closeHandler={() => closeContentHandler(0)}
               />
             }
@@ -127,7 +126,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     openContentHandler: index => dispatch(getOpenContent(index)),
-    openContentAsyncHandler: index => dispatch(getOpenContentAsync()),
     closeContentHandler: index => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
