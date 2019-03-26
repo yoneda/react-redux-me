@@ -60,6 +60,14 @@ const MainContainer = ({
         <div style={{ width: "760px", padding: "20px 20px 20px 20px" }}>
           <Background isDarkmode={dark} />
           {moonbuttonPressed === true ? <UpdateGrobalCss isDarkmode={dark} /> : ""}
+
+          {/*アニメーションのテスト */}
+          <PlusButton
+            isActive={0}
+            openHandler={() => openContentHandler(0)}
+            closeHandler={() => closeContentHandler(0)}
+          />
+
           <MoonButton
             isDarkmode={dark}
             isMoonbuttonPressed={moonbuttonPressed}
