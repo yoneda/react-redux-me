@@ -26,6 +26,7 @@ import instagram from "../resources/instagram.min.svg";
 import twitter from "../resources/twitter.min.svg";
 import github from "../resources/github.min.svg";
 import behance from "../resources/behance.min.svg";
+import PlusButtonAnimated from "../components/PlusButtonAnimated";
 
 const MainContainer = ({
   toggles,
@@ -60,12 +61,10 @@ const MainContainer = ({
         <div style={{ width: "760px", padding: "20px 20px 20px 20px" }}>
           <Background isDarkmode={dark} />
           {moonbuttonPressed === true ? <UpdateGrobalCss isDarkmode={dark} /> : ""}
-
+          
           {/*アニメーションのテスト */}
-          <PlusButton
-            isActive={0}
-            openHandler={() => openContentHandler(0)}
-            closeHandler={() => closeContentHandler(0)}
+          <PlusButtonAnimated
+            updateHandler={(isOpen)=>console.log(isOpen)}
           />
 
           <MoonButton

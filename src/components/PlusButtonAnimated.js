@@ -1,48 +1,30 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
 
-const wrap = css`
-  user-select: none;
-`;
+/**
+ * PlusButtonWithAnimated
+ * 
+ * @param {function} updateHandler 状態が変更されたときに通知する
+ */
 
-const buttonSvgStyle = css`
-  fill: white;
-  stroke: #dadada;
-  stroke-width: 1px;
-`;
+class PlusButtonWithAnimated extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOpen: false };
+  }
 
-const lineStyle = css`
-  stroke: black;
-  stroke-width: 4px;
-  stroke-linecap: round;
-`;
+  update(isOpen){
+    this.setState({isOpen: isOpen});
+    this.props.updateHandler(this.state.isOpen);
+  }
 
-const renderPlusSvg = () => {
-  return (
-    <svg css={{ width: "40px", height: "40px", cursor: "pointer" }}>
-      <circle css={buttonSvgStyle} cx="20" cy="20" r="19.5" />
-      <line css={lineStyle} x1="13" y1="20" x2="27" y2="20" />
-      <line css={lineStyle} x1="20" y1="13" x2="20" y2="27" />
-    </svg>
-  );
-};
+  render() {
+    return (
+      <div>
+        <button onClick={() => this.update(!this.state.isOpen)}>button</button>
+        <p>{this.state.isOpen ? "on" : "off"}</p>
+      </div>
+    );
+  }
+}
 
-const renderMinusSvg = () => {
-  return (
-    <svg css={{ width: "40px", height: "40px", cursor: "pointer" }}>
-      <circle css={buttonSvgStyle} cx="20" cy="20" r="19.5" />
-      <line css={lineStyle} x1="13" y1="20" x2="27" y2="20" />
-    </svg>
-  );
-};
-const PlusButtonAnimated = ({ isActive, openHandler, closeHandler }) => {
-  const render = isActive ? renderMinusSvg : renderPlusSvg;
-  const handler = isActive ? closeHandler : openHandler;
-  return (
-    <div css={wrap} onClick={handler}>
-      {render()}
-    </div>
-  );
-};
-
-export default PlusButtonAnimated;
+export default PlusButtonWithAnimated;
