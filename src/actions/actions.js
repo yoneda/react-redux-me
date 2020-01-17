@@ -65,7 +65,7 @@ export const getAddPostsAsync = () => {
     dispatch(getOnLoading()); // loadingをオン
     requestQiitaPosts((posts)=>{
       dispatch(getOffLoading()); // loadingをオフ
-      dispatch(getAddPosts(posts.splice(0,5))); //最初から3件のみをstoreで管理
+      dispatch(getAddPosts(posts.splice(0,5))); //最初から5件のみをstoreで管理
     })
   }
 }
