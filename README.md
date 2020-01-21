@@ -12,6 +12,14 @@ npm install // install some modules
 npm start // start app
 ```
 
+## how to deploy using netlify
+
+```
+npm run build
+netlify deploy --dir public // specify directory
+netlify deploy --prod
+```
+
 ## task management
 https://trello.com/b/GOhxeZCZ/portfolio2019
 
