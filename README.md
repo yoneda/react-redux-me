@@ -12,12 +12,17 @@ npm install // install some modules
 npm start // start app
 ```
 
-## how to deploy using netlify
+## how to deploy on netlify manually
 
 ```
 npm run build
 netlify deploy --dir public // specify directory
 netlify deploy --prod
+```
+
+alternatively, you can deploy with travisCI
+```
+git push
 ```
 
 ## task management
