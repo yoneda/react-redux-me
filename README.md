@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/yoneda/react-redux-me.svg?branch=master)](https://travis-ci.org/yoneda/react-redux-me)
+
 ## What is this
 
 yoneda's profile site implement in react-redux.  
