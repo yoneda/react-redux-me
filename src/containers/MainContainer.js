@@ -61,7 +61,6 @@ const MainContainer = ({
         <div style={{ width: "760px", padding: "20px 20px 20px 20px" }}>
           <Background isDarkmode={dark} />
           {moonbuttonPressed === true ? <UpdateGrobalCss isDarkmode={dark} /> : ""}
-          <div>バージョン3</div>
           <MoonButton
             isDarkmode={dark}
             isMoonbuttonPressed={moonbuttonPressed}
