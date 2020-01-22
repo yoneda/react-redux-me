@@ -20,7 +20,7 @@ netlify deploy --dir public // specify directory
 netlify deploy --prod
 ```
 
-alternatively, you can deploy with travisCI
+alternatively, you can deploy with travisCI :)
 ```
 git push
 ```
