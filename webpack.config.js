@@ -5,8 +5,8 @@ module.exports = {
     path: `${__dirname}/public`, // 出力先
     filename: "main.js",
   },
-  mode: "development",
-  /* mode: "production", */
+  /*mode: "development", */
+  mode: "production",
   devServer:{
     contentBase: "./public",
     port: "3000"
