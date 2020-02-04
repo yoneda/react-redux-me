@@ -15,7 +15,7 @@ npm install // install some modules
 npm start // start app
 ```
 
-## how to deploy on netlify manually
+## how to manually deploy on netlify
 
 ```
 npm run build
@@ -23,11 +23,10 @@ netlify deploy --dir public // specify directory
 netlify deploy --prod
 ```
 
-alternatively, you can deploy with travisCI :)
+alternatively, you can deploy through travisCI
 ```
 git push
 ```
 
 ## task management
 https://trello.com/b/GOhxeZCZ/portfolio2019
-
