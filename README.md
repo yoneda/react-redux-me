@@ -30,4 +30,9 @@ git push
 ```
 
 ## task management
+all tasks are managed by kanban board on trello.
 https://trello.com/b/GOhxeZCZ/portfolio2019
+
+## design management
+check design of this site on figma.
+https://www.figma.com/file/TOnQxcwHqdVGm8a89SKjFZ/portfolio2019
