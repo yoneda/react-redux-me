@@ -40,6 +40,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^3.0.1",
     "mocha": "^7.0.0",
+    "processmd": "^4.5.0",
     "redux-devtools-extension": "^2.13.7",
     "storybook": "^1.0.0",
     "style-loader": "^0.23.1",
