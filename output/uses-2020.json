@@ -1,0 +1,15 @@
+{
+  "title": "2020年に使っているものまとめ",
+  "description": "2020年に使っているものまとめ",
+  "date": "2020-02-14T00:00:00.000Z",
+  "tags": [
+    "test"
+  ],
+  "bodyContent": "お久しぶりです。2020年も2月に入ってすこし暖かくなってきました。Kutt の作者のPoura さんの[Uses](https://pouria.dev/uses/)を読んで、普段使っているものをまとめたくなりました。簡単にですが備忘録代わりに置いておきます。よければ参考にしてください。\n\n### Hardware\n* MacBookPro 13インチ 2017年モデル - メインのPC\n* iPhone8 64GB - スマホ\n* Kindle 第10世代 - 電子書籍\n\n### Desctop App\n* Google Chrome  - メインのブラウザ\n* Alfred - ランチャー\n* Notion - クラウドのメモ\n* SublimeText - 一時的なメモ\n* Cacher - クラウドのスニペット管理\n* Trello - タスク管理\n* VSCode - ソースコードエディタ\n* Insomnia - RESTクライアント\n* Sketch - デザイン\n\n普段はMacBookProの13インチを使っています。コードを書く時も、Youtubeで動画を見る時もこれです。紙の書籍は持ち運びが不便なので、最近はKindleで本を読んでいます。最近はNotionを本当によく使っています。簡単なメモや、毎日のタスク管理、料理のレシピまでNotionで管理しています。Evernoteより自由度が高いので自分は好きです。来年、再来年ともなると使っているものは変わっていくんでしょうか。また1年後にでもまとめたいと思っています。",
+  "bodyHtml": "<p>お久しぶりです。2020年も2月に入ってすこし暖かくなってきました。Kutt の作者のPoura さんの<a href=\"https://pouria.dev/uses/\">Uses</a>を読んで、普段使っているものをまとめたくなりました。簡単にですが備忘録代わりに置いておきます。よければ参考にしてください。</p>\n<h3>Hardware</h3>\n<ul>\n<li>MacBookPro 13インチ 2017年モデル - メインのPC</li>\n<li>iPhone8 64GB - スマホ</li>\n<li>Kindle 第10世代 - 電子書籍</li>\n</ul>\n<h3>Desctop App</h3>\n<ul>\n<li>Google Chrome  - メインのブラウザ</li>\n<li>Alfred - ランチャー</li>\n<li>Notion - クラウドのメモ</li>\n<li>SublimeText - 一時的なメモ</li>\n<li>Cacher - クラウドのスニペット管理</li>\n<li>Trello - タスク管理</li>\n<li>VSCode - ソースコードエディタ</li>\n<li>Insomnia - RESTクライアント</li>\n<li>Sketch - デザイン</li>\n</ul>\n<p>普段はMacBookProの13インチを使っています。コードを書く時も、Youtubeで動画を見る時もこれです。紙の書籍は持ち運びが不便なので、最近はKindleで本を読んでいます。最近はNotionを本当によく使っています。簡単なメモや、毎日のタスク管理、料理のレシピまでNotionで管理しています。Evernoteより自由度が高いので自分は好きです。来年、再来年ともなると使っているものは変わっていくんでしょうか。また1年後にでもまとめたいと思っています。</p>\n",
+  "dir": "output",
+  "base": "uses-2020.json",
+  "ext": ".json",
+  "sourceBase": "uses-2020.md",
+  "sourceExt": ".md"
+}

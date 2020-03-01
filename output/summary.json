@@ -1,0 +1,34 @@
+{
+  "fileMap": {
+    "output/uses-2020.json": {
+      "title": "2020年に使っているものまとめ",
+      "description": "2020年に使っているものまとめ",
+      "date": "2020-02-14T00:00:00.000Z",
+      "tags": [
+        "test"
+      ],
+      "dir": "output",
+      "base": "uses-2020.json",
+      "ext": ".json",
+      "sourceBase": "uses-2020.md",
+      "sourceExt": ".md"
+    },
+    "output/bulk-delete-github.json": {
+      "title": "Github のリポジトリを一括で削除する",
+      "description": "Github API を使ってGithub の整理をする",
+      "date": "2020-02-04T00:00:00.000Z",
+      "tags": [
+        "test"
+      ],
+      "dir": "output",
+      "base": "bulk-delete-github.json",
+      "ext": ".json",
+      "sourceBase": "bulk-delete-github.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "content/bulk-delete-github.md",
+    "content/uses-2020.md"
+  ]
+}
