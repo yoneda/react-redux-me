@@ -13,8 +13,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js",
+    "dev": "parcel serve public/index.html --out-dir build",
+    "build": "parcel build public/index.html --public-url ./ --out-dir build",
     "test": "mocha"
   },
   "eslintConfig": {
@@ -31,16 +31,8 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "css-loader": "^2.1.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^3.0.1",
+    "cssnano": "^4.1.10",
     "mocha": "^7.0.0",
-    "redux-devtools-extension": "^2.13.7",
-    "style-loader": "^0.23.1",
-    "svg-inline-loader": "^0.8.0",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "redux-devtools-extension": "^2.13.7"
   }
 }

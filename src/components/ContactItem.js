@@ -16,11 +16,11 @@ const svgStyle = css`
   height: 50px;
 `;
 
-const ContactItem = ({ title, link, svg }) => {
+const ContactItem = ({ title, link, icon }) => {
   return (
     <div css={containerStyle}>
       <a href={link} target="__black">
-        <div css={svgStyle} dangerouslySetInnerHTML={{ __html: svg }} />
+        <div css={svgStyle}>{icon}</div>
       </a>
     </div>
   );

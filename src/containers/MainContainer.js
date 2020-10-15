@@ -22,10 +22,10 @@ import {
   getAddPostsAsync,
 } from "../actions/actions.js";
 
-import instagram from "../resources/instagram.min.svg";
-import twitter from "../resources/twitter.min.svg";
-import github from "../resources/github.min.svg";
-import behance from "../resources/behance.min.svg";
+import InstagramIcon from "../components/InstagramIcon";
+import TwitterIcon from "../components/TwitterIcon";
+import GithubIcon from "../components/GithubIcon";
+import BehanceIcon from "../components/BehanceIcon";
 import PlusButtonAnimated from "../components/PlusButtonAnimated";
 
 const MainContainer = ({
@@ -45,13 +45,13 @@ const MainContainer = ({
 
   const projectContents = [
     { title: "Kakeibo", link: "https://react-redux-project.netlify.com/" },
-    { title: "Weekly post", link: "https://react-redux-project.netlify.com/" }
+    { title: "Weekly post", link: "https://react-redux-project.netlify.com/" },
   ];
   const contactContents = [
-    { title: "twitter", link: "http://twitter.com/yonedaco", svg: twitter },
-    { title: "github", link: "http://github.com/yoneda", svg: github },
-    { title: "instagram", link: "http://instagram.com/yonedaco", svg: instagram },
-    { title: "instagram", link: "https://www.behance.net/yoneda/", svg: behance }
+    { title: "twitter", link: "http://twitter.com/yonedaco", icon: <TwitterIcon /> },
+    { title: "github", link: "http://github.com/yoneda", icon: <GithubIcon /> },
+    { title: "instagram", link: "http://instagram.com/yonedaco", icon: <InstagramIcon /> },
+    { title: "instagram", link: "https://www.behance.net/yoneda/", icon: <BehanceIcon /> },
   ];
   return (
     // TODO: container component は主にロジックを管理するためのコンポーネントで、デザインを担当するのはpresententional component。
@@ -95,7 +95,9 @@ const MainContainer = ({
               />
             }
             items={contactContents.map((item, index) => {
-              return <ContactItem key={index} title={item.title} link={item.link} svg={item.svg} />;
+              return (
+                <ContactItem key={index} title={item.title} link={item.link} icon={item.icon} />
+              );
             })}
           />
 
@@ -116,20 +118,20 @@ const MainContainer = ({
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     toggles: state.toggles,
     dark: state.dark,
     loading: state.loading,
     articles: state.posts,
-    moonbuttonPressed: state.moonbuttonPressed
+    moonbuttonPressed: state.moonbuttonPressed,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    openContentHandler: index => dispatch(getOpenContent(index)),
-    closeContentHandler: index => dispatch(getCloseContent(index)),
+    openContentHandler: (index) => dispatch(getOpenContent(index)),
+    closeContentHandler: (index) => dispatch(getCloseContent(index)),
     onDarkmodeHandler: () => dispatch(getOnDarkmode()),
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
     onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed()),
@@ -137,7 +139,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MainContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
