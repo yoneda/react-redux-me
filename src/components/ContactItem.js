@@ -16,11 +16,13 @@ const svgStyle = css`
   height: 50px;
 `;
 
-const ContactItem = ({ title, link, icon }) => {
+const ContactItem = ({ title, link, icon, onClick }) => {
   return (
     <div css={containerStyle}>
       <a href={link} target="__black">
-        <div css={svgStyle}>{icon}</div>
+        <div css={svgStyle} onClick={() => onClick()}>
+          {icon}
+        </div>
       </a>
     </div>
   );

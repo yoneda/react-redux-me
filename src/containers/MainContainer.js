@@ -49,10 +49,30 @@ const MainContainer = ({
     { title: "Weekly post", link: "https://react-redux-project.netlify.com/" },
   ];
   const contactContents = [
-    { title: "twitter", link: "http://twitter.com/yonedaco", icon: <TwitterIcon /> },
-    { title: "github", link: "http://github.com/yoneda", icon: <GithubIcon /> },
-    { title: "instagram", link: "http://instagram.com/yonedaco", icon: <InstagramIcon /> },
-    { title: "instagram", link: "https://www.behance.net/yoneda/", icon: <BehanceIcon /> },
+    {
+      title: "twitter",
+      link: "http://twitter.com/yonedaco",
+      icon: <TwitterIcon />,
+      track: analytics.twitterClicked,
+    },
+    {
+      title: "github",
+      link: "http://github.com/yoneda",
+      icon: <GithubIcon />,
+      track: analytics.githubClicked,
+    },
+    {
+      title: "instagram",
+      link: "http://instagram.com/yonedaco",
+      icon: <InstagramIcon />,
+      track: analytics.instagramClicked,
+    },
+    {
+      title: "behance",
+      link: "https://www.behance.net/yoneda/",
+      icon: <BehanceIcon />,
+      track: analytics.behanceClicked,
+    },
   ];
   return (
     // TODO: container component は主にロジックを管理するためのコンポーネントで、デザインを担当するのはpresententional component。
@@ -97,7 +117,13 @@ const MainContainer = ({
             }
             items={contactContents.map((item, index) => {
               return (
-                <ContactItem key={index} title={item.title} link={item.link} icon={item.icon} />
+                <ContactItem
+                  key={index}
+                  title={item.title}
+                  link={item.link}
+                  icon={item.icon}
+                  onClick={() => item.track()}
+                />
               );
             })}
           />
@@ -132,13 +158,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     openContentHandler: (index) => {
-      if(index===0){
+      if (index === 0) {
         analytics.projectsOpen();
-      }
-      else if(index===1){
+      } else if (index === 1) {
         analytics.contactsOpen();
-      }
-      else if(index===2){
+      } else if (index === 2) {
         analytics.postsOpen();
       }
       dispatch(getOpenContent(index));
