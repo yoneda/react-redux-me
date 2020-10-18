@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import * as analytics from "../analytics";
 
 import Background from "../components/Background";
 import UpdateGrobalCss from "../components/UpdateGrobalCss";
@@ -130,9 +131,23 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    openContentHandler: (index) => dispatch(getOpenContent(index)),
+    openContentHandler: (index) => {
+      if(index===0){
+        analytics.projectsOpen();
+      }
+      else if(index===1){
+        analytics.contactsOpen();
+      }
+      else if(index===2){
+        analytics.postsOpen();
+      }
+      dispatch(getOpenContent(index));
+    },
     closeContentHandler: (index) => dispatch(getCloseContent(index)),
-    onDarkmodeHandler: () => dispatch(getOnDarkmode()),
+    onDarkmodeHandler: () => {
+      analytics.darkmodeOn();
+      dispatch(getOnDarkmode());
+    },
     offDarkmodeHandler: () => dispatch(getOffDarkmode()),
     onMoonbuttonPressedHandler: () => dispatch(getOnMoonbuttonPressed()),
     addPostsAsyncHandler: () => dispatch(getAddPostsAsync()),
