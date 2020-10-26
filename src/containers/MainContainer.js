@@ -27,7 +27,6 @@ import InstagramIcon from "../components/InstagramIcon";
 import TwitterIcon from "../components/TwitterIcon";
 import GithubIcon from "../components/GithubIcon";
 import BehanceIcon from "../components/BehanceIcon";
-import PlusButtonAnimated from "../components/PlusButtonAnimated";
 
 const MainContainer = ({
   toggles,
