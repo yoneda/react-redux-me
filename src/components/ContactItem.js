@@ -16,7 +16,7 @@ const svgStyle = css`
   height: 50px;
 `;
 
-const ContactItem = ({ title, link, icon, onClick }) => {
+const ContactItem = ({ link, icon, onClick }) => {
   return (
     <div css={containerStyle}>
       <a href={link} target="__black">
