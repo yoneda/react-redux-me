@@ -8,7 +8,7 @@ font-family: 'Roboto', sans-serif;
 font-weight: 700;
 `
 
-const Title = ({}) => {
+const Title = () => {
   return(
     <div>
       <h2 css={titleNameStyle} className="chameleonText">Kohei Yoneda</h2>
